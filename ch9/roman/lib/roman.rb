@@ -19,9 +19,11 @@ class Roman
 
 	def convert
 		@@old_roman_numeral = ""
-		
+
 		@@roman_numerals.values.reverse.each do |val|
-			check(val)
+			if val <= @input_number
+				check(val)
+			end
 		end
 
 		@@old_roman_numeral
